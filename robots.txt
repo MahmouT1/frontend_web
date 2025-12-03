@@ -1,0 +1,92 @@
+# Robots.txt for Doublybusiness
+# AI-Powered Marketing Agency - Cairo, Egypt
+# https://doublybusiness.com
+
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Disallow crawling of admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /backend/
+Disallow: /*.json$
+Disallow: /cgi-bin/
+
+# Disallow crawling of duplicate content
+Disallow: /*?*
+Disallow: /*?utm_source=
+Disallow: /*?utm_medium=
+Disallow: /*?utm_campaign=
+Disallow: /*?ref=
+Disallow: /*?fbclid=
+
+# Allow crawling of specific query parameters if needed
+Allow: /*?page=
+Allow: /*?category=
+
+# Disallow specific file types
+Disallow: /*.php$
+Disallow: /*.inc$
+Disallow: /*.sql$
+Disallow: /*.tgz$
+
+# Crawl delay for aggressive bots (optional)
+# Crawl-delay: 1
+
+# Google-specific rules
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Google Image Bot
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /media/
+
+# Bing Bot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Yandex Bot
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
+
+# ChatGPT/OpenAI Bot (for AEO)
+User-agent: GPTBot
+Allow: /
+Allow: /blog/
+Allow: /services/
+
+# Common AI Crawlers
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Block bad bots and scrapers
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://doublybusiness.com/sitemap.xml
+Sitemap: https://doublybusiness.com/sitemap-images.xml
+
+# Additional information
+# Host: https://doublybusiness.com
